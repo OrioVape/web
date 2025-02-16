@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrioVape - Tienda en línea</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+    <nav class="navbar glass-effect">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i data-lucide="leaf" class="brand-icon"></i> 
+
+                <span class="brand-text">OrioVape</span>
+            </div>
+            
+            <div class="nav-menu">
+                <div class="nav-links">
+                    <a href="#" class="nav-link">Inicio</a>
+                    <a href="#" class="nav-link">Productos</a>
+                    <a href="#" class="nav-link">Categorías</a>
+                    <a href="#" class="nav-link">Ofertas</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="icon-button" aria-label="Buscar">
+                        <i data-lucide="search"></i>
+                    </button>
+                    <button class="icon-button" id="cartButton" aria-label="Carrito">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="cart-count" id="cartCount"></span>
+                    </button>
+                    <button class="menu-button" id="menuButton" aria-label="Menú">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#" class="mobile-link">Inicio</a>
+            <a href="#" class="mobile-link">Productos</a>
+            <a href="#" class="mobile-link">Categorías</a>
+            <a href="#" class="mobile-link">Ofertas</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="hero-section">
+            <h1 class="hero-title">OrioVape - Le meilleur liquide</h1>
+<p class="hero-subtitle">
+  Découvrez notre sélection exclusive de e-liquides, conçus pour vous offrir une expérience de vapotage inoubliable. Profitez de nos offres spéciales et savourez des saveurs irrésistibles.
+</p>
+
+
+        </div>
+        
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be inserted here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-backdrop"></div>
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h2 class="cart-title">Tu Carrito</h2>
+                <button class="close-button" id="closeCart" aria-label="Cerrar carrito">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be inserted here by JavaScript -->
+            </div>
+            <div class="cart-footer" id="cartFooter">
+                <!-- Cart total will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Product Preview Modal -->
+    <div class="preview-modal" id="previewModal">
+        <div class="preview-backdrop"></div>
+        <div class="preview-content">
+            <button class="preview-close" id="closePreview" aria-label="Cerrar vista previa">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="preview-grid">
+                <div class="preview-gallery">
+                    <div class="preview-main-image">
+                        <img id="previewImage" src="" alt="">
+                    </div>
+                    <div class="preview-thumbnails" id="previewThumbnails">
+                        <!-- Thumbnails will be inserted here -->
+                    </div>
+                </div>
+                <div class="preview-details">
+                    <h2 id="previewTitle" class="preview-title"></h2>
+                    <div class="preview-rating">
+                        <div class="stars">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star-half" class="star-half"></i>
+                        </div>
+                        <span>4.8 (120 reseñas)</span>
+                    </div>
+                    <div class="preview-price-container">
+                        <div class="preview-price">
+                            <span id="previewPrice" class="current-price"></span>
+                            <span id="previewOriginalPrice" class="original-price"></span>
+                        </div>
+                        <span class="discount-badge">-20%</span>
+                    </div>
+                    <p id="previewDescription" class="preview-description"></p>
+                    <div class="preview-features">
+                        <h3>Características destacadas</h3>
+                        <ul class="features-list">
+                            <li><i data-lucide="check-circle"></i> Garantía de 2 años</li>
+                            <li><i data-lucide="check-circle"></i> Envío gratis</li>
+                            <li><i data-lucide="check-circle"></i> Devolución sin costo</li>
+                        </ul>
+                    </div>
+                    <div class="preview-actions">
+                        <button id="previewAddToCart" class="preview-add-to-cart">
+                            <i data-lucide="shopping-cart"></i>
+                            Agregar al carrito
+                        </button>
+                        <button class="preview-wishlist">
+                            <i data-lucide="heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
