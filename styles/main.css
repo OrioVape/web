@@ -1,0 +1,43 @@
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://media-hosting.imagekit.io//e390c9afee5d4ed7/fotor-ai-20250216113130.jpg?Expires=1834897956&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=NX7igTNra4LOmvRUyDmS-QLzDYJvUh3Og60zZyDsMH6KHtatBiMOg5oI6Ce4Bn-G1q1Q1HEKrEK-xy2XxgGemTIB-gL9xBNpoGgpHFFdJp~J9tQIAQsnlh0GQ-CxIRSeloI5kSvb5IOvCuA2aJTmaHz2E-CMKMU8828grw70UlGMQ2OfSVDltA-fs8qgG--0n7IJou1Jen~-dBZmmA~l7LRuM9ezpvC7Fpb3-FfujzEzJUDLB-PN-xeqQ-wkVunuqFlXONkOwTsHBleGXV5jx0xzKXdx0aejP~weSgZaavOAtgHb5v4Eyte2D2WmN1x6I8~JfPA-Rs5VXpbbozGCZQ__');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.product-card {
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cart-drawer {
+    transition: transform 0.3s ease-in-out;
+}
+
+.cart-drawer.open {
+    transform: translateX(0);
+}
+
+.cart-drawer.closed {
+    transform: translateX(100%);
+}
+
+
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 400px !important;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .cart-drawer {
+        width: 100% !important;
+    }
+}
